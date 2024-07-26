@@ -11,3 +11,9 @@
 4.1 EJS Tags
 4.2
 4.3 EJS Partials
+npm-debug.log
+**/node_modulus
+**/package-lock.json
+node_modules/
+!/node_modules/
+!src/node_modules/
