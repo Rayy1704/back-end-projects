@@ -9,6 +9,7 @@ const api_url = "https://api.urbandictionary.com/v0/random";
 app.use(express.static("public",{extended : true}));
 
 app.get("/", async(req,res)=>{
+    try{
     var response;
     while(true){
         response= await axios.get("https://api.urbandictionary.com/v0/random");
@@ -21,5 +22,9 @@ app.get("/", async(req,res)=>{
         meaning:response.data.list[0].definition,
     };
     res.render("index.ejs",data);
+    }catch (error) {
+        res.status(404).send(error.message);
+    }
+
 });
 app.listen(port,async ()=>{console.log(`Listening on port ${port}.`);});
