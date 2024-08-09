@@ -17,6 +17,7 @@ npm-debug.log
 node_modules/
 !/node_modules/
 !src/node_modules/
+.env
 6.0 DIY API
 8.3 Travel Tracker
 8.5 Family Travel Tracker
@@ -24,3 +25,4 @@ node_modules/
 9.1
 9.2
 9.3
+9.4
