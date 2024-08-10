@@ -46,10 +46,14 @@ app.get("/register",(req,res)=>{
 })
 app.get("/secrets",async(req,res)=>{
   if (req.isAuthenticated()) {
-    const result = await db.query("SELECT * FROM users WHERE email = $1", [req.user.email]);
-    res.render("secrets.ejs",{
-      secret:(result.rows.length>0?result.rows[0].secret:"NULL"),
-    });
+    try{
+      const result = await db.query("SELECT * FROM users WHERE email = $1", [req.user.email]);
+      res.render("secrets.ejs",{
+        secret:(result.rows.length>0?result.rows[0].secret:"NULL"),
+      });
+    }catch(err){
+      console.log(err);
+    }
   }else{  
     res.redirect("/login")
   }
