@@ -44,9 +44,12 @@ app.get("/login",(req,res)=>{
 app.get("/register",(req,res)=>{
   res.render("register.ejs");
 })
-app.get("/secrets",(req,res)=>{
-  if(req.isAuthenticated()){
-    res.render("secrets.ejs");
+app.get("/secrets",async(req,res)=>{
+  if (req.isAuthenticated()) {
+    const result = await db.query("SELECT * FROM users WHERE email = $1", [req.user.email]);
+    res.render("secrets.ejs",{
+      secret:(result.rows.length>0?result.rows[0].secret:"NULL"),
+    });
   }else{  
     res.redirect("/login")
   }
@@ -65,6 +68,13 @@ app.get("/logout", (req, res) => {
     }
     res.redirect("/");
   });
+});
+app.get("/submit",(req,res)=>{
+  if (req.isAuthenticated()) {
+    res.render("submit.ejs");
+  } else {
+    res.redirect("/login");
+  }
 });
 //post requests
 app.post("/login",passport.authenticate("local",{
@@ -96,7 +106,20 @@ app.post("/register",async(req,res)=>{
     console.log(err);
   }
 })
-
+app.post("/submit", async (req, res) => {
+  if(req.user){
+    try{
+      const email =(req.user).email;
+      const newSecret = req.body["secret"];
+      const result = await db.query("UPDATE users SET secret=$1 WHERE email = $2",[newSecret,email]);
+      res.redirect("/secrets");
+    }catch(err){
+      console.log(err)
+    }
+  }else{
+    res.redirect("/login");
+  }
+});
 //passports
 
 passport.use("local",
