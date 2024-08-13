@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-var yourName="Rayyan Salman"
+var yourName="your name here"
 var date = new Date;
 var year = date.getFullYear();
 ReactDOM.render(
