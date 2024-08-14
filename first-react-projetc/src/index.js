@@ -8,6 +8,7 @@ ReactDOM.render(
       <li>They just go blub blub</li>
       <li>They die if you don't have water</li>
       <li>They look weird</li>
+      <li>They eat too much</li>
     </ul>
   </div>,
   document.getElementById("root")
