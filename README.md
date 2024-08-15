@@ -6,7 +6,7 @@ This project is a backend web application designed to showcase a modern web stac
 
 ## Tools
 
-![Visual Studio Code](https://skillicons.dev/icons?i=vscode) ![Postman](https://skillicons.dev/icons?i=postman) ![Git](https://skillicons.dev/icons?i=git) ![GitHub](https://skillicons.dev/icons?i=github) ![Jquery](https://skillicons.dev/icons?i=jquery) ![postgresql](https://skillicons.dev/icons?i=postgresql)
+![Visual Studio Code](https://skillicons.dev/icons?i=vscode) ![Postman](https://skillicons.dev/icons?i=postman) ![Git](https://skillicons.dev/icons?i=git) ![GitHub](https://skillicons.dev/icons?i=github) ![Jquery](https://skillicons.dev/icons?i=jquery) ![postgresql](https://skillicons.dev/icons?i=postgresql) ![npm](https://skillicons.dev/icons?i=npm)
 
 ## Languages & Frameworks
 
