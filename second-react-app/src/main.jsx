@@ -1,12 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
-function removeText(){
-  document.getElementsByClassName("placeholder").innerHTML=""
+const hour = new Date().getHours();
+let greeting ;
+let color ;
+if(hour>=12&&hour<18){
+  greeting="Good Evening";
+  color="Green"
+}
+else if(hour>=18&&hour<24){
+  greeting="Good Night";
+  color="Blue";
+}
+else if(hour>=24&&hour<12){
+  greeting = "Good Morning";
+  color = "red"
 }
 ReactDOM.render(
-  <div>
-    <h1>Text Editer</h1>
-    <p onClick="removeText()" contentEditable="true" spellCheck="false" className="placeholder" style ={{color:"rgba(202, 202, 202, 0.871)",}}>Enter your text here</p>    
-  </div>,
-  document.getElementById("root")
-);
+  <h1 className="heading" style ={{color:color}}>{greeting}</h1>,document.getElementById("root")
+)
+
