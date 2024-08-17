@@ -6,11 +6,11 @@ This project is a backend web application designed to showcase a modern web stac
 
 ## Tools
 
-![Visual Studio Code](https://skillicons.dev/icons?i=vscode) ![Postman](https://skillicons.dev/icons?i=postman) ![Git](https://skillicons.dev/icons?i=git) ![GitHub](https://skillicons.dev/icons?i=github) ![Jquery](https://skillicons.dev/icons?i=jquery) ![postgresql](https://skillicons.dev/icons?i=postgresql) ![npm](https://skillicons.dev/icons?i=npm)
+![Visual Studio Code](https://skillicons.dev/icons?i=vscode) ![Postman](https://skillicons.dev/icons?i=postman) ![Git](https://skillicons.dev/icons?i=git) ![GitHub](https://skillicons.dev/icons?i=github) ![postgresql](https://skillicons.dev/icons?i=postgresql) ![npm](https://skillicons.dev/icons?i=npm)
 
 ## Languages & Frameworks
 
-![JavaScript](https://skillicons.dev/icons?i=js) ![Node.js](https://skillicons.dev/icons?i=nodejs) ![Express](https://skillicons.dev/icons?i=express) ![React](https://skillicons.dev/icons?i=react) ![MongoDB](https://skillicons.dev/icons?i=mongodb) ![HTML](https://skillicons.dev/icons?i=html) ![CSS](https://skillicons.dev/icons?i=css)
+![JavaScript](https://skillicons.dev/icons?i=js) ![Node.js](https://skillicons.dev/icons?i=nodejs) ![Express](https://skillicons.dev/icons?i=express) ![React](https://skillicons.dev/icons?i=react) ![MongoDB](https://skillicons.dev/icons?i=mongodb) ![HTML](https://skillicons.dev/icons?i=html) ![CSS](https://skillicons.dev/icons?i=css) ![Jquery](https://skillicons.dev/icons?i=jquery)
 
 
 ## Installation
