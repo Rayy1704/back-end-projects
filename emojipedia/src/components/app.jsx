@@ -11,9 +11,9 @@ function App(){
     return(
         <div>
             <h1><span>EmojiPedia</span></h1>
-            <div className="dictionary">
+            <dl className="dictionary">
                 {emojipedia.map((emoji)=>(createCard(emoji)))}
-            </div>
+            </dl>
         </div>
     );
 }

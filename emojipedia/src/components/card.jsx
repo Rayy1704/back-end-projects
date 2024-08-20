@@ -3,7 +3,7 @@ import React from "react";
 function Card(prop){
 return (
     <div>
-        <h2 className="emoji">{prop.emoji}</h2>
+        <dt className="emoji">{prop.emoji}</dt>
         <dt>{prop.name}</dt>
         <dd>{prop.meaning}</dd>
     </div>
