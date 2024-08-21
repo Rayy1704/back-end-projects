@@ -2,7 +2,7 @@ import React from "react";
 
 function App() {
 
-  let [count,setCount]=React.useState(0);
+  let [count,setCount]=React.useState(1);
   let inStock=11;
   function Increment(){
     count<inStock && setCount(count+1);
