@@ -1,6 +1,6 @@
 import React from "react";
 function getTime(){
-  return new Date().toLocaleTimeString().substring(0,7);
+  return new Date().toLocaleTimeString().slice(0,-2);
 }
 function App() {
   let [time,setTime] = React.useState(getTime()) ;
@@ -9,7 +9,7 @@ function App() {
   }
   setInterval(displayTime,1000);
   return (
-    <div className="container">
+    <div >
       <h1>{time}</h1>
     </div>
   );
