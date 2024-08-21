@@ -1,14 +1,14 @@
 import React from "react";
 import Increment from "./+button";
 import Decrement from "./-button";
-let [count,setcount]=React.useState(0);
 function App() {
+  let [count,setcount]=React.useState(0);
 
   return (
     <div className="container">
       <h1>{count}</h1>
-      <button onClick={Increment}>+</button>
-      <button onClick={Decrement}>+</button>
+      <button onClick={Increment(count,setcount)}>+</button>
+      <button onClick={Decrement(count,setcount)}>-</button>
     </div>
   );
 }
