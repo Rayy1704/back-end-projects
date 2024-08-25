@@ -2,26 +2,40 @@ import React,{useState} from "react";
 
 function App() {
   const [isHovered,setHovered] = useState(false);
-  const [headingText,setHeading]= useState("Hello");
-  const [name,setName]=useState("");
-  function handleChange(event){
-    setName(event.target.value);
+  const [fName,setFName]=useState("");
+  const [lName,setLName]=useState("");
+
+  function updateFName(event){
+    setFName(event.target.value);
   }
+  function updateLName(event){
+    setLName(event.target.value);
+  }
+
+
   return (
     <div className="container">
-      <h1>{headingText}</h1>
-      <input 
-        className ="nameBox" 
-        type="text" 
-        placeholder="What's your name?" 
-        onChange ={handleChange}
-      />
-      <button 
-        onClick={()=>{setHeading(`Hello, ${name}`)}} 
-        style = {{backgroundColor:(isHovered?'black':'white'),}} 
-        onMouseEnter={()=>{setHovered(true)}} 
-        onMouseLeave={()=>{setHovered(false)}}
-      >Submit</button>
+      <h1>Hello {fName} {lName}</h1>
+      <form>
+        <input 
+          name = "fName" 
+          placeholder="First Name"
+          onChange={updateFName}
+        ></input>
+        <input 
+          name = "lName" 
+          placeholder="Last Name"
+          onChange={updateLName}
+        ></input>
+        <button
+          onMouseEnter={()=>{setHovered(true)}}
+          onMouseLeave={()=>{setHovered(false)}}
+          style={{
+            backgroundColor:(isHovered&&"black")
+          }}
+          
+        >Submit</button>
+      </form>
     </div>
   );
 }
