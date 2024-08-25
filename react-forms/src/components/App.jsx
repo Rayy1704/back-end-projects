@@ -15,11 +15,12 @@ function App() {
           fName:value
           ,lName:prev.lName
         }
-      }else if(name==="lName")
+      }else if(name==="lName"){
         return {
           fName:prev.fName
           ,lName:value
         }
+      }
     })
   }
 
