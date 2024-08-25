@@ -10,7 +10,7 @@ function App() {
 
   function updateFullName(event){
     const {value,name}=event.target;
-    setFullName(prev=>{
+    setContact(prev=>{
       if(name==="fName"){
         return {
           fName:value
