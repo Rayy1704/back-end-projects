@@ -2,9 +2,10 @@ import React,{useState} from "react";
 
 function App() {
   const [isHovered,setHovered] = useState(false);
-  const [fullName, setFullName] = useState({
+  const [contact, setContact] = useState({
     fName: "",
-    lName: ""
+    lName: "",
+    email:""
   });
 
   function updateFullName(event){
@@ -13,12 +14,20 @@ function App() {
       if(name==="fName"){
         return {
           fName:value
-          ,lName:prev.lName
+          ,lName:prev.lName,
+          email:prev.email
         }
       }else if(name==="lName"){
         return {
           fName:prev.fName
           ,lName:value
+          ,email:prev.email
+        }
+      }else if(name==="email"){
+        return {
+          fName:prev.fName
+          ,lName:prev.lName,
+          email:value
         }
       }
     })
@@ -27,19 +36,24 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Hello {fullName.fName} {fullName.lName}</h1>
+      <h1>Hello {contact.fName} {contact.lName}</h1>
       <form>
         <input 
           name = "fName" 
           placeholder="First Name"
           onChange={updateFullName}
-          value={fullName.fName}
+          value={contact.fName}
         ></input>
         <input 
           name = "lName" 
           placeholder="Last Name"
           onChange={updateFullName}
-          value={fullName.lName}
+          value={contact.lName}
+        ></input>
+        <input 
+          name = "email" 
+          placeholder="Email"
+          onChange={updateFullName}
         ></input>
         <button
           onMouseEnter={()=>{setHovered(true)}}
