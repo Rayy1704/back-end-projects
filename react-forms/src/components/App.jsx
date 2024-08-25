@@ -2,30 +2,41 @@ import React,{useState} from "react";
 
 function App() {
   const [isHovered,setHovered] = useState(false);
-  const [fName,setFName]=useState("");
-  const [lName,setLName]=useState("");
+  const [fullName, setFullName] = useState({
+    fName: "",
+    lName: ""
+  });
 
-  function updateFName(event){
-    setFName(event.target.value);
-  }
-  function updateLName(event){
-    setLName(event.target.value);
+  function updateFullName(event){
+    let newValue=event.target.value;
+    setFullName(prev=>{
+      if(event.target.name==="fName"){
+        return {
+          fName:newValue
+          ,lName:prev.lName
+        }
+      }else if(event.target.name==="lName")
+        return {
+          fName:prev.fName
+          ,lName:newValue
+        }
+    })
   }
 
 
   return (
     <div className="container">
-      <h1>Hello {fName} {lName}</h1>
+      <h1>Hello {fullName.fName} {fullName.lName}</h1>
       <form>
         <input 
           name = "fName" 
           placeholder="First Name"
-          onChange={updateFName}
+          onChange={updateFullName}
         ></input>
         <input 
           name = "lName" 
           placeholder="Last Name"
-          onChange={updateLName}
+          onChange={updateFullName}
         ></input>
         <button
           onMouseEnter={()=>{setHovered(true)}}
