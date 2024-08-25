@@ -32,11 +32,13 @@ function App() {
           name = "fName" 
           placeholder="First Name"
           onChange={updateFullName}
+          value={fullName.fName}
         ></input>
         <input 
           name = "lName" 
           placeholder="Last Name"
           onChange={updateFullName}
+          value={fullName.lName}
         ></input>
         <button
           onMouseEnter={()=>{setHovered(true)}}
