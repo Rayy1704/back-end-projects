@@ -54,6 +54,7 @@ function App() {
           name = "email" 
           placeholder="Email"
           onChange={updateFullName}
+          value={contact.email}
         ></input>
         <button
           onMouseEnter={()=>{setHovered(true)}}
