@@ -8,17 +8,17 @@ function App() {
   });
 
   function updateFullName(event){
-    let newValue=event.target.value;
+    const {value,name}=event.target;
     setFullName(prev=>{
-      if(event.target.name==="fName"){
+      if(name==="fName"){
         return {
-          fName:newValue
+          fName:value
           ,lName:prev.lName
         }
-      }else if(event.target.name==="lName")
+      }else if(name==="lName")
         return {
           fName:prev.fName
-          ,lName:newValue
+          ,lName:value
         }
     })
   }
